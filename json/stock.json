@@ -1,0 +1,66 @@
+[
+  {
+    "id": 0,
+    "img": "fuente.jpg",
+    "tipo": "componentes",
+    "producto": "Fuente",
+    "precio": 30000,
+    "cantidad": 1
+  },
+  {
+    "id": 1,
+    "img": "gabinete.jpg",
+    "tipo": "componentes",
+    "producto": "Gabinete",
+    "precio": 11000,
+    "cantidad": 1
+  },
+  {
+    "id": 2,
+    "img": "memoria.jpg",
+    "tipo": "componentes",
+    "producto": "Ram",
+    "precio": 6000,
+    "cantidad": 1
+  },
+  {
+    "id": 3,
+    "img": "monitor.jpg",
+    "tipo": "perifericos",
+    "producto": "Monitor",
+    "precio": 80000,
+    "cantidad": 1
+  },
+  {
+    "id": 4,
+    "img": "mother.jpg",
+    "tipo": "componentes",
+    "producto": "Mother",
+    "precio": 17000,
+    "cantidad": 1
+  },
+  {
+    "id": 5,
+    "img": "mouse.jpg",
+    "tipo": "perifericos",
+    "producto": "Mouse",
+    "precio": 9000,
+    "cantidad": 1
+  },
+  {
+    "id": 6,
+    "img": "placa.jpg",
+    "tipo": "componentes",
+    "producto": "Placa",
+    "precio": 145000,
+    "cantidad": 1
+  },
+  {
+    "id": 7,
+    "img": "procesador.jpg",
+    "tipo": "componentes",
+    "producto": "Procesador",
+    "precio": 43000,
+    "cantidad": 1
+  }
+]
