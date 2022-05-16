@@ -27,7 +27,6 @@ let continuarBtm = document.getElementById("continuarBtm");
 
 let confirmarPedido = document.getElementById("confirmarPedido");
 
-
 const obtenerStock = () => {
   return new Promise((resolve, reject) => {
     fetch("../json/stock.json")

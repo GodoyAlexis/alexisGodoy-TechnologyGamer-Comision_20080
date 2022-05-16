@@ -37,7 +37,7 @@ function cargarCarrito() {
             </td>
             <td class="columna fw-bolder"> ${producto}</td>
             <td class="columna fw-bolder"> $${precio}</td>
-            <td>
+            <td class="columnaCant">
                 <div class="contenedorCantidad"> 
                       
                 <input type="button" id="restar-producto" onclick="restaProductos(${id})" data-id="${id}" value="-">
@@ -213,13 +213,35 @@ function resTotal(valor) {
   resumenTotal.innerText = `ARS $${valor}`;
 }
 
-confirmarPedido.onclick = async function () {
-  localStorage.removeItem("carrito");
-  Swal.fire({
-    position: "center",
-    icon: "success",
-    title: "Pedido confirmado!",
-    showConfirmButton: false,
-    timer: 1500,
+(function () {
+  "use strict";
+
+  var forms = document.querySelectorAll(".needs-validation");
+
+  Array.prototype.slice.call(forms).forEach(function (form) {
+    form.addEventListener(
+      "submit",
+      function (event) {
+        event.preventDefault();
+        if (!form.checkValidity()) {
+          event.stopPropagation();
+        } else {
+          localStorage.removeItem("carrito");
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Pedido confirmado!",
+            showConfirmButton: false,
+            timer: 1500,
+          });
+          setTimeout(() => {
+            location.reload();
+          }, "1050");
+        }
+
+        form.classList.add("was-validated");
+      },
+      false
+    );
   });
-};
+})();

@@ -136,103 +136,120 @@
           </form>
 
           <!-- segundo modal -->
-
-          <div
-            class="modal fade bg-$red-200"
-            id="modal2"
-            tabindex="-1"
-            aria-hidden="true"
-            aria-labelledby="modalTitle2"
-            data-bs-backdrop="static"
-          >
+          <form class="needs-validation" novalidate>
             <div
-              class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+              class="modal fade bg-$red-200"
+              id="modal2"
+              tabindex="-1"
+              aria-hidden="true"
+              aria-labelledby="modalTitle2"
+              data-bs-backdrop="static"
             >
-              <div class="modal-content">
-                <!-- modal header --> 
-                <div class="modal-header bg-danger">
-                  <h4 class="fw-bolder text-white">Información de contacto</h4>
-                </div>
-                <!-- modal body -->
-                <div
-                  class="modal-body contenedor-form d-flex flex-column justify-content-center"
-                >
-                  <div class="mb-3">
-                    <label for="nombre-txt" class="form-label fw-bolder"
-                      >Nombre Completo:</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="nombre-txt"
-                      placeholder="Ingrese nombre.."
-                    />
+              <div
+                class="modal-dialog modal-dialog-centered modal-dialog-scrollable"
+              >
+                <div class="modal-content">
+                  <!-- modal header -->
+                  <div class="modal-header bg-danger">
+                    <h4 class="fw-bolder text-white">
+                      Información de contacto
+                    </h4>
                   </div>
-                  <div class="mb-3">
-                    <label for="telefono-txt" class="form-label fw-bolder"
-                      >Telefono:</label
-                    >
-                    <span>(sin espacios)</span>
-                    <div class="input-group mb-3">
-                      <span class="input-group-text">+54</span>
+                  <!-- modal body -->
+                  <div
+                    class="modal-body contenedor-form d-flex flex-column justify-content-center"
+                  >
+                    <div class="mb-3">
+                      <label for="nombre-txt" class="form-label fw-bolder"
+                        >Nombre Completo:</label
+                      >
                       <input
                         type="text"
                         class="form-control"
-                        id="telefono-txt"
-                        placeholder="Ej: 1154864971"
+                        id="nombre-txt"
+                        placeholder="Ingrese nombre.."
+                        required
                       />
+                      <div class="valid-feedback">Campo completado</div>
+                      <div class="invalid-feedback">Complete los datos!</div>
                     </div>
-                  </div>
-                  <div class="mb-5">
-                    <label for="email-txt" class="form-label fw-bolder"
-                      >Email:</label
-                    >
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="email-txt"
-                      placeholder="Ingrese email.."
-                    />
-                  </div>
-                  <div class="resumen-content">
-                    <div class="resumen-header mb-3 pb-3">
-                      <span class=" fw-bolder h5"
-                        ><img
-                          class="carrito-resumen m-1"
-                          src="./img/carrito-de-compras.png"
-                          alt="carrito"
-                        />
-                        Resumen del pedido</span
+                    <div class="mb-3">
+                      <label for="telefono-txt" class="form-label fw-bolder"
+                        >Telefono:</label
                       >
+                      <span>(sin espacios)</span>
+                      <div class="input-group mb-3">
+                        <span class="input-group-text">+54</span>
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="telefono-txt"
+                          placeholder="Ej: 1154864971"
+                          required
+                        />
+                        <div class="valid-feedback">Campo completado</div>
+                        <div class="invalid-feedback">Complete los datos!</div>
+                      </div>
                     </div>
+                    <div class="mb-5">
+                      <label for="email-txt" class="form-label fw-bolder"
+                        >Email:</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email-txt"
+                        placeholder="Ingrese email.."
+                        required
+                      />
+                      <div class="valid-feedback">Campo completado</div>
+                      <div class="invalid-feedback">Complete los datos!</div>
+                    </div>
+                    <div class="resumen-content">
+                      <div class="resumen-header mb-3 pb-3">
+                        <span class="fw-bolder h5"
+                          ><img
+                            class="carrito-resumen m-1"
+                            src="./img/carrito-de-compras.png"
+                            alt="carrito"
+                          />
+                          Resumen del pedido</span
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="subtotal-content d-flex mb-3 justify-content-between"
+                    >
+                      <div class="resumen-body mb-3 fw-bolder">Subtotal:</div>
+                      <div class="resumenSubtotal fw-bolder">0</div>
+                    </div>
+                    <div class="total-content d-flex justify-content-between">
+                      <div class="resumen-footer fw-bolder">Total:</div>
+                      <div class="resumenTotal fw-bolder">0</div>
+                    </div>
+                    <span>(Incluye el 10% OFF por pago en efectivo)</span>
                   </div>
-                  <div class="subtotal-content d-flex mb-3 justify-content-between">
-                    <div class="resumen-body mb-3 fw-bolder">Subtotal:</div>
-                    <div class="resumenSubtotal fw-bolder">0</div>
+                  <!-- modal footer -->
+                  <div class="modal-footer justify-content-end">
+                    <a
+                      class="btn btn-secondary"
+                      href="#miModal"
+                      data-bs-toggle="modal"
+                      role="button"
+                      >Regresar</a
+                    >
+                    <button
+                      type="submit"
+                      id="confirmarPedido"
+                      class="btn btn-danger"
+                    >
+                      Confirmar pedido
+                    </button>
                   </div>
-                  <div class="total-content d-flex justify-content-between">
-                    <div class="resumen-footer fw-bolder">Total:</div>
-                    <div class="resumenTotal fw-bolder">0</div>
-                  </div>
-                  <span>(Incluye el 10% OFF por pago en efectivo)</span>
-                </div>
-                <!-- modal footer -->
-                <div class="modal-footer justify-content-end">
-                  <a
-                    class="btn btn-secondary"
-                    href="#miModal"
-                    data-bs-toggle="modal"
-                    role="button"
-                    >Regresar</a
-                  >
-                  <button type="button" id="confirmarPedido" 
-                  data-bs-dismiss="modal" class="btn btn-danger">
-                    Confirmar pedido
-                  </button>
                 </div>
               </div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </nav>
